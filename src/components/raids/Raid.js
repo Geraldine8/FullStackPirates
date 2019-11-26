@@ -1,14 +1,17 @@
-import React  from 'react';
+import React, {Fragment}  from 'react';
+import {Link} from 'react-router-dom';
 
 const Raid = (props) => {
-  
+
+const url = "/raids/" + props.raid.id;
   return (
-    <div className="component">
-        <p className="name">
-          {props.raid.location}
-        </p>
+
+    <Fragment>
+      <Link to={url} className="name">
+        {props.raid.location}
+      </Link>
       <p>Loot: {props.raid.loot}</p>
-    </div>
+    </Fragment>
   )
 }
 

@@ -10,6 +10,8 @@ import ShipContainer from './ships/ShipContainer';
 import ShipList from '../components/ships/ShipList';
 import ShipDetail from '../components/ships/ShipDetail';
 
+import RaidContainer from './raids/RaidContainer'
+
 import Request from '../helpers/request';
 
 class MainContainer extends Component {
@@ -31,6 +33,12 @@ class MainContainer extends Component {
       <Route path="/ships" render={(props) =>{
           return <ShipContainer />
       }}/>
+
+        {/* GET ALL RAIDS */}
+        <Route path="/raids" render={(props) =>{
+            return <RaidContainer />
+        }}/>
+
 
       </Switch>
 
